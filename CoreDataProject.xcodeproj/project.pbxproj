@@ -64,13 +64,12 @@
 		E6A376B528C3A68D006BE4D7 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				E6A376DB28C3B7DF006BE4D7 /* Interface */,
 				E6A376D828C3A9FD006BE4D7 /* Core Data Handlers */,
 				E6A376D728C3A9EB006BE4D7 /* View Controller */,
 				E6A376D628C3A9D4006BE4D7 /* App Delegate */,
 				E6A376D128C3A81A006BE4D7 /* CDModels */,
-				E6A376BC28C3A68D006BE4D7 /* Main.storyboard */,
 				E6A376C228C3A68F006BE4D7 /* Assets.xcassets */,
-				E6A376C428C3A68F006BE4D7 /* LaunchScreen.storyboard */,
 				E6A376C728C3A68F006BE4D7 /* Info.plist */,
 				E6A376BF28C3A68D006BE4D7 /* CoreDataProject.xcdatamodeld */,
 			);
@@ -109,6 +108,15 @@
 				E6A376D928C3AA10006BE4D7 /* PersistentStorage.swift */,
 			);
 			path = "Core Data Handlers";
+			sourceTree = "<group>";
+		};
+		E6A376DB28C3B7DF006BE4D7 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E6A376BC28C3A68D006BE4D7 /* Main.storyboard */,
+				E6A376C428C3A68F006BE4D7 /* LaunchScreen.storyboard */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
