@@ -11,10 +11,10 @@ import CoreData
 protocol EmployeeRepository {
     
     func getAll() -> [CDEmployee]?
-    func get(byIdentifier id: UUID) -> CDEmployee?
-    func update(identifier id: UUID)
+    func update(employee record: CDEmployee)
     func create(employee: CDEmployee)
     func delete(record: CDEmployee)
+    func getById(identifier id: UUID?) -> CDEmployee?
     
 }
 
@@ -26,14 +26,18 @@ struct EmployeeDataRepository : EmployeeRepository {
         return employee
     }
     
-    func get(byIdentifier id: UUID) -> CDEmployee? {
-        return nil
-    }
-    
-    func update(identifier id: UUID) {
+    func update(employee record: CDEmployee){
+         
+        let employee = self.getById(identifier: record.identifier)
         
+        guard employee != nil else {
+            return
+        }
+        employee?.name = "Changed name"
+        employee?.email = "changedEmail"
+        employee?.department = "ChangedDepartment"
         
-        
+
     }
     
     func create(employee: CDEmployee) {
@@ -45,12 +49,17 @@ struct EmployeeDataRepository : EmployeeRepository {
     
     func delete(record: CDEmployee) {
         
+        guard let empObj = self.getById(identifier: record.identifier) else {
+            return
+        }
+        PersistentStorage.sharedInstance.context.delete(empObj)
+        
     }
     
-    func getById(identifier id: UUID) -> CDEmployee? {
+    func getById(identifier id: UUID?) -> CDEmployee? {
         
         let fetchReq = NSFetchRequest<CDEmployee>(entityName: "CDEmployee")
-        let empIdPredicate = NSPredicate(format: "id == %@",id as CVarArg)
+        let empIdPredicate = NSPredicate(format: "id == %@",id! as CVarArg)
         fetchReq.predicate = empIdPredicate
         return try? PersistentStorage.sharedInstance.context.fetch(fetchReq).first
         

@@ -16,9 +16,10 @@ extension CDEmployee {
         return NSFetchRequest<CDEmployee>(entityName: "CDEmployee")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var department: String?
     @NSManaged public var email: String?
+    @NSManaged public var identifier: UUID?
+    @NSManaged public var name: String?
 
 }
 
