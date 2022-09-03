@@ -16,6 +16,7 @@
 		E6A376C628C3A68F006BE4D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6A376C428C3A68F006BE4D7 /* LaunchScreen.storyboard */; };
 		E6A376D428C3A81A006BE4D7 /* CDEmployee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A376D228C3A81A006BE4D7 /* CDEmployee+CoreDataClass.swift */; };
 		E6A376D528C3A81A006BE4D7 /* CDEmployee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A376D328C3A81A006BE4D7 /* CDEmployee+CoreDataProperties.swift */; };
+		E6A376DA28C3AA10006BE4D7 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A376D928C3AA10006BE4D7 /* PersistentStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E6A376C728C3A68F006BE4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6A376D228C3A81A006BE4D7 /* CDEmployee+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDEmployee+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E6A376D328C3A81A006BE4D7 /* CDEmployee+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDEmployee+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E6A376D928C3AA10006BE4D7 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,10 @@
 		E6A376B528C3A68D006BE4D7 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				E6A376D828C3A9FD006BE4D7 /* Core Data Handlers */,
+				E6A376D728C3A9EB006BE4D7 /* View Controller */,
+				E6A376D628C3A9D4006BE4D7 /* App Delegate */,
 				E6A376D128C3A81A006BE4D7 /* CDModels */,
-				E6A376B628C3A68D006BE4D7 /* AppDelegate.swift */,
-				E6A376B828C3A68D006BE4D7 /* SceneDelegate.swift */,
-				E6A376BA28C3A68D006BE4D7 /* ViewController.swift */,
 				E6A376BC28C3A68D006BE4D7 /* Main.storyboard */,
 				E6A376C228C3A68F006BE4D7 /* Assets.xcassets */,
 				E6A376C428C3A68F006BE4D7 /* LaunchScreen.storyboard */,
@@ -82,6 +84,31 @@
 				E6A376D328C3A81A006BE4D7 /* CDEmployee+CoreDataProperties.swift */,
 			);
 			path = CDModels;
+			sourceTree = "<group>";
+		};
+		E6A376D628C3A9D4006BE4D7 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E6A376B628C3A68D006BE4D7 /* AppDelegate.swift */,
+				E6A376B828C3A68D006BE4D7 /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		E6A376D728C3A9EB006BE4D7 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6A376BA28C3A68D006BE4D7 /* ViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		E6A376D828C3A9FD006BE4D7 /* Core Data Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				E6A376D928C3AA10006BE4D7 /* PersistentStorage.swift */,
+			);
+			path = "Core Data Handlers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +188,7 @@
 				E6A376C128C3A68D006BE4D7 /* CoreDataProject.xcdatamodeld in Sources */,
 				E6A376D528C3A81A006BE4D7 /* CDEmployee+CoreDataProperties.swift in Sources */,
 				E6A376B928C3A68D006BE4D7 /* SceneDelegate.swift in Sources */,
+				E6A376DA28C3AA10006BE4D7 /* PersistentStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
