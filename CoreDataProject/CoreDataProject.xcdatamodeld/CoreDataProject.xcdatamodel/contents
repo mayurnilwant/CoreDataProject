@@ -3,9 +3,15 @@
     <entity name="CDEmployee" representedClassName="CDEmployee" syncable="YES">
         <attribute name="department" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="CDEmployee" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="CDEmployee" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>
