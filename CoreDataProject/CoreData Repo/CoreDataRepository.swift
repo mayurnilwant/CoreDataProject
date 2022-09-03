@@ -32,6 +32,8 @@ struct EmployeeDataRepository : EmployeeRepository {
     
     func update(identifier id: UUID) {
         
+        
+        
     }
     
     func create(employee: CDEmployee) {
@@ -45,7 +47,14 @@ struct EmployeeDataRepository : EmployeeRepository {
         
     }
     
-    
+    func getById(identifier id: UUID) -> CDEmployee? {
+        
+        let fetchReq = NSFetchRequest<CDEmployee>(entityName: "CDEmployee")
+        let empIdPredicate = NSPredicate(format: "id == %@",id as CVarArg)
+        fetchReq.predicate = empIdPredicate
+        return try? PersistentStorage.sharedInstance.context.fetch(fetchReq).first
+        
+    }
     
 }
 
