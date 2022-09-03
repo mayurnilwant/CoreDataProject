@@ -44,4 +44,18 @@ final class PersistentStorage {
             }
         }
     }
+    func getAllRecords<T: NSManagedObject>(managedObjType: T.Type)  -> [T]? {
+        
+        do {
+            
+            guard  let result = try PersistentStorage.sharedInstance.context.fetch(managedObjType.fetchRequest()) as? [T] else {
+                return nil
+            }
+            return result
+        }catch let error {
+            print(error)
+            return nil
+        }
+        
+    }
 }
